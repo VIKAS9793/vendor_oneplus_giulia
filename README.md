@@ -2,6 +2,27 @@
 
 This repository contains the vendor tree for OnePlus 13R (Giulia), including proprietary blobs and makefiles necessary for building the device.
 
+## Git LFS
+
+This repository uses Git Large File Storage (LFS) for managing large binary files. Before cloning, make sure you have Git LFS installed:
+
+```bash
+# Install Git LFS
+git lfs install
+
+# Clone the repository
+git clone https://github.com/your-username/vendor_oneplus_giulia.git
+cd vendor_oneplus_giulia
+
+# Pull LFS files
+git lfs pull
+```
+
+If you don't have Git LFS installed, you can get it from:
+- Windows: Download from https://git-lfs.github.com
+- Linux: `sudo apt install git-lfs` (Ubuntu/Debian) or `sudo yum install git-lfs` (Fedora)
+- macOS: `brew install git-lfs`
+
 ## Structure
 
 ```
