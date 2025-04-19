@@ -43,14 +43,73 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.privapp.list=org.codeaurora.snapcam \
     persist.vendor.cne.feature=1 \
     persist.vendor.data.mode=concurrent \
-    persist.vendor.overlay.izat.optin=rro
+    persist.vendor.overlay.izat.optin=rro \
+    ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.has_wide_color_display=true \
+    ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.wcg_composition_dataspace=143261696 \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
+    vendor.display.enable_rounded_corner=1 \
+    vendor.display.disable_offline_rotator=1 \
+    ro.surface_flinger.set_idle_timer_ms=4000 \
+    ro.surface_flinger.set_touch_timer_ms=4000 \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.display.type=oled \
+    ro.display.resolution.width=1264 \
+    ro.display.resolution.height=2780 \
+    ro.display.max_brightness=4500 \
+    ro.display.hbm_brightness=1600 \
+    ro.display.min_refresh_rate=1 \
+    ro.display.max_refresh_rate=120 \
+    ro.display.ltpo_version=4.1 \
+    ro.vendor.oplus.camera.backCamSize=50MP+50MP+8MP \
+    ro.vendor.oplus.camera.frontCamSize=16MP \
+    ro.vendor.oplus.camera.main.sensor=sony_lyt700 \
+    ro.vendor.oplus.camera.tele.sensor=s5kjn5 \
+    ro.vendor.oplus.camera.main.af=pdaf \
+    ro.vendor.oplus.camera.main.ois=true \
+    ro.vendor.oplus.camera.tele.zoom=2x \
+    ro.vendor.oplus.camera.wide.fov=84 \
+    ro.vendor.oplus.camera.tele.fov=47 \
+    ro.vendor.oplus.camera.ultra.fov=112 \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.oplus.camera \
+    vendor.camera.aux.packageexcludelist=org.telegram.messenger,com.facebook.katana \
+    ro.vendor.oplus.battery.capacity=6000 \
+    ro.vendor.oplus.charge.super_vooc=80 \
+    persist.vendor.chg.max_volt_mv=4500 \
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    ro.vendor.audio.sdk.ssr=false \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicerec=true \
+    persist.vendor.audio.fluence.speaker=true \
+    ro.vendor.audio.us.proximity=true \
+    ro.vendor.audio.soundtrigger.feature.version=4 \
+    ro.vendor.audio.feature.oreality=true \
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.vendor.perf.scroll_opt=true \
+    ro.vendor.perf.scroll_opt.heavy_app=true \
+    vendor.power.pasr.enabled=true \
+    vendor.pasr.activemode.enabled=true
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.audio.service \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.bluetooth.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    sound_trigger.primary.pineapple \
+    audio.primary.pineapple \
+    audio_amplifier.pineapple \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libvolumelistener
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -65,7 +124,12 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
+    vendor.oneplus.hardware.CameraMDMHIDL@1.0-service \
+    vendor.oneplus.hardware.camera@1.0.vendor \
+    camera.qcom \
+    libcamera2ndk_vendor \
+    libdng_sdk.vendor
 
 # Display
 PRODUCT_PACKAGES += \
@@ -73,11 +137,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
+    android.hardware.memtrack@1.0-service \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm@1.5-service.clearkey \
+    android.hardware.drm@1.5-service.drm
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -91,8 +158,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.2-impl \
+    android.hardware.health@2.2-service
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -130,7 +197,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.1-service \
     android.hardware.wifi.supplicant@1.4 \
     android.hardware.wifi.hostapd@1.3
 
