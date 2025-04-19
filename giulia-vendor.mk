@@ -181,7 +181,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=QTI
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2024-01-05
+VENDOR_SECURITY_PATCH := 2024-03-05
 
 # Copy all Oneplus-specific proprietary libraries to target location
 PRODUCT_COPY_FILES += \
@@ -322,4 +322,59 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno
 
 # Standard Android Security Patch
-VENDOR_SECURITY_PATCH := 2024-01-05 
+VENDOR_SECURITY_PATCH := 2024-03-05 
+
+# Additional Hardware Components
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti \
+    android.hardware.biometrics.face@1.0-service \
+    android.hardware.biometrics.fingerprint@2.3-service \
+    android.hardware.light@2.0-service \
+    android.hardware.vibrator@1.3-service.oneplus \
+    vendor.oneplus.hardware.CameraMDMHIDL@1.0-service \
+    vendor.oneplus.hardware.display@1.0-service
+
+# Additional Vendor Libraries
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
+    vendor.qti.hardware.systemhelper@1.0.vendor \
+    vendor.oneplus.hardware.camera@1.0.vendor \
+    vendor.oneplus.hardware.display@1.0.vendor
+
+# Additional Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
+    frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
+    frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
+
+# Updated Device Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi \
+    ro.vendor.product.cpu.abilist32=armeabi-v7a,armeabi \
+    ro.vendor.product.cpu.abilist64=arm64-v8a \
+    ro.vendor.build.security_patch=$(VENDOR_SECURITY_PATCH) \
+    ro.vendor.boot.flash.locked=1 \
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.vendor.perf.scroll_opt=1 \
+    ro.vendor.df.effect.conflict=1 \
+    ro.vendor.camera.extensions.package=com.oneplus.camera \
+    ro.vendor.camera.extensions.service=com.oneplus.camera.CameraExtensionsService
+
+# OnePlus specific configurations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.oplus.market.name=OnePlus13R \
+    ro.vendor.oplus.regionmark=IN \
+    ro.vendor.oplus.operator=OPEN_IN \
+    ro.vendor.oplus.product.model=CPH2691 \
+    ro.vendor.oplus.product.manufacturer=OnePlus
+
+# Additional system properties
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.oplus.region=IN \
+    ro.system.oplus.product.model=CPH2691 
