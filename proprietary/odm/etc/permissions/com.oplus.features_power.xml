@@ -1,4 +1,0 @@
-<permissions>
-    <!-- add for midas support -->
-    <feature name="oplus.obrain.support" />
-</permissions>
