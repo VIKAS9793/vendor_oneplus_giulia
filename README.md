@@ -1,113 +1,109 @@
-# OnePlus 13R (Giulia) Vendor Tree
+# Vendor Tree for OnePlus 13R (Giulia)
 
-This repository contains the vendor blobs for OnePlus 13R (Giulia) needed to build LineageOS or other AOSP-based ROMs.
+This repository contains the vendor tree for OnePlus 13R (Giulia), including proprietary blobs and makefiles necessary for building the device.
 
-## Device Specifications
-
-- **Model**: CPH2691
-- **Codename**: Giulia
-- **System Name**: OnePlus13R
-- **System Device**: OP5D3BL1
-- **Board**: pineapple
-- **Architecture**: arm64
-- **Screen Resolution**: 2780x1264 (xxhdpi)
-
-## Directory Structure
+## Structure
 
 ```
-vendor/
-├── app/                    # Vendor applications
-│   ├── CACertService/
-│   ├── CneApp/
-│   └── IWlanService/
-├── bin/                    # Binary executables
-├── dsp/                    # DSP components
-│   ├── adsp/
-│   └── cdsp/
-├── etc/                    # Configuration files
-│   ├── audio/
-│   ├── display/
-│   ├── nfc/
-│   ├── sensor/
-│   ├── vintf/
-│   └── wifi/
-├── firmware/              # Firmware files
-│   ├── bt_firmware/
-│   └── firmware/
-└── lib64/                 # 64-bit libraries
-    ├── camera/
-    ├── hw/
-    └── soundfx/
+vendor/oneplus/giulia/
+├── proprietary/          # Proprietary blobs
+│   ├── vendor/          # Vendor specific files
+│   │   ├── bin/        # Binary executables
+│   │   ├── etc/        # Configuration files
+│   │   ├── firmware/   # Firmware files
+│   │   ├── lib64/      # 64-bit libraries
+│   │   └── dsp/        # DSP related files
+│   ├── odm/            # ODM specific files
+│   ├── system_ext/     # System extension files
+│   └── my_product/     # OnePlus specific product files
+├── giulia-vendor.mk     # Main vendor makefile
+└── giulia-vendor-blobs.mk # Vendor blobs makefile
+
 ```
 
-## Recent Changes
+## Features
 
-### 2024-03-xx Update
-- Cleaned up repository structure:
-  - Removed unnecessary verification and copy scripts
-  - Cleaned up top-level directory
-- Fixed corrupted binary file:
-  - Replaced 0-byte `libvndfwk_detect_jni.qti_vendor.so` in `vendor/app/CneApp/lib/arm64/`
-  - Source: System variant from vendor_blobs
-  - Size: ~51KB
-- Verified all make files and paths
-- Confirmed all binary files are non-corrupted
-- Directory structure matches make file definitions
+- Complete vendor binary support
+- Hardware Abstraction Layer (HAL) services
+- Camera configurations
+- Audio configurations
+- Firmware files
+- System libraries
+- VINTF manifest files
+- OnePlus specific components
 
-## Build Instructions
+## Components
 
-1. Clone this repository to `vendor/oneplus/giulia`
-2. Include the device in your build:
-   ```bash
-   # Device configuration
-   $(call inherit-product, device/oneplus/giulia/device.mk)
-   
-   # Vendor blobs
-   $(call inherit-product, vendor/oneplus/giulia/giulia-vendor.mk)
-   ```
+### Essential Hardware Components
+- TimeService
+- IWlanService
+- CneApp
+- Sensor Service
 
-## Vendor Blobs
+### Supported HALs
+- Audio (v7.0)
+- Bluetooth (v1.1)
+- Camera (v2.4)
+- Display
+- DRM
+- Gatekeeper
+- GPS/GNSS
+- Health
+- Keymaster
+- Media
+- Neural Networks
+- Power
+- RIL
+- Sensors
+- USB
+- WiFi
 
-The vendor tree includes:
-- Camera libraries and tuning files
-- Display calibration data
-- Audio configurations and effects
-- Bluetooth and WiFi firmware
-- NFC configurations
-- Sensor configurations
-- Biometric components (fingerprint, face)
-- Various system libraries and services
+## Device Information
 
-## Important Components
+- Model: CPH2691
+- System Name: OnePlus13R
+- Device: OP5D3BL1
+- Board: pineapple
+- Security Patch Level: 2024-01-05
 
-### Critical Libraries
-- Qualcomm components (QTI)
-- OnePlus specific hardware interfaces
-- Camera and display calibration
-- Audio processing modules
-- Security components
+## Latest Changes
 
-### Configuration Files
-- WiFi and Bluetooth configurations
-- NFC settings for different regions
-- Audio effects and mixer paths
-- Display calibration data
-- Sensor configurations
+- Updated vendor blobs structure
+- Added missing VINTF manifest files
+- Updated HAL versions to latest supported
+- Added OnePlus specific configurations
+- Organized makefiles for better maintainability
+- Added support for new hardware features
+- Updated security patch level
+- Added proper firmware file handling
+- Enhanced audio and camera configurations
+
+## Building
+
+This vendor tree is designed to be used with the Android Open Source Project (AOSP) build system. It should be placed in:
+
+```
+vendor/oneplus/giulia/
+```
 
 ## Notes
 
-- All binary files have been verified for integrity
-- Paths in make files match the actual directory structure
-- No missing or corrupted files remain
-- All necessary firmware files are included
-- Vendor security patch level: 2025-03-05
-
-## License
-
-This vendor tree is proprietary and is only to be used for building ROMs for OnePlus 13R (Giulia).
+- Some firmware files might need to be obtained from the device
+- Certain OnePlus-specific features require additional configuration
+- Security patch level is maintained at 2024-01-05
 
 ## Credits
 
-- OnePlus for the original vendor files
-- LineageOS team for the base structure
-- Contributors who helped with fixing and organizing the vendor tree 
+Maintained by: VIKAS9793 (vikassahani17@gmail.com)
+
+## License
+
+```
+# Copyright (C) 2024 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+``` 
