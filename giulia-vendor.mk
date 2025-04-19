@@ -51,9 +51,7 @@ PRODUCT_COPY_FILES += \
 # Include DSP files
 PRODUCT_COPY_FILES += \
     vendor/oneplus/giulia/proprietary/vendor/dsp/adsp/fastrpc_shell_3:$(TARGET_COPY_OUT_VENDOR)/dsp/adsp/fastrpc_shell_3 \
-    vendor/oneplus/giulia/proprietary/vendor/dsp/adsp/fastrpc_shell_unsigned_3:$(TARGET_COPY_OUT_VENDOR)/dsp/adsp/fastrpc_shell_unsigned_3 \
-    vendor/oneplus/giulia/proprietary/vendor/dsp/cdsp/fastrpc_shell_3:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/fastrpc_shell_3 \
-    vendor/oneplus/giulia/proprietary/vendor/dsp/cdsp/fastrpc_shell_unsigned_3:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/fastrpc_shell_unsigned_3
+    vendor/oneplus/giulia/proprietary/vendor/dsp/cdsp/fastrpc_shell_3:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/fastrpc_shell_3
 
 # Include vibrator configuration files
 PRODUCT_COPY_FILES += \
