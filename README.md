@@ -43,6 +43,9 @@ vendor/
 ## Recent Changes
 
 ### 2024-03-xx Update
+- Cleaned up repository structure:
+  - Removed unnecessary verification and copy scripts
+  - Cleaned up top-level directory
 - Fixed corrupted binary file:
   - Replaced 0-byte `libvndfwk_detect_jni.qti_vendor.so` in `vendor/app/CneApp/lib/arm64/`
   - Source: System variant from vendor_blobs
