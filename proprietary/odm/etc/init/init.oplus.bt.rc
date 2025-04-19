@@ -1,0 +1,21 @@
+#ifdef OPLUS_FEATURE_BT_EAP_LOG
+#YangXiaomin@CONNECTIVITY.BT.Basic.Log.7419512 , 2024/06/13, Add for change ssrdump permission to 0644
+on  property:persist.vendor.bluetooth.ssrfile.chgperm=*
+    start changessrfileperm
+
+service changessrfileperm /vendor/bin/sh /odm/bin/init.qti.hsuart.debug.sh
+    class core
+    user root
+    oneshot
+#endif /* OPLUS_FEATURE_BT_EAP_LOG */
+#ifdef OPLUS_FEATURE_BT_EAP_LOG
+#Wangguolong@CONNECTIVITY.BT.Basic.Feature.2531788 , 2021/11/10, Add for Open Bluetooth Uart Log
+on  property:persist.vendor.tracing.hsuart.enabled=*
+    start qti-hsuart-debug
+
+service qti-hsuart-debug /vendor/bin/sh /odm/bin/init.qti.hsuart.debug.sh
+    class core
+    user root
+    oneshot
+
+#endif /* OPLUS_FEATURE_BT_EAP_LOG */

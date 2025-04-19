@@ -1,0 +1,133 @@
+{
+"otg": {
+  "support": true,
+  "cc_detect_support": true
+},
+"usb": {
+  "type": "USB_TYPE_C",
+  "protocol": "USB_PROTOCOL_2_X"
+},
+ "vibrator": {
+   "support": true,
+   "version": "VERSION_3",
+   "impedance": "[4000,11500]",
+   "resonant.frequency": "[160,180]"
+ },
+ "charge": {
+   "dual_cp_support": true,
+   "series_dual_battery_support": false,
+   "parallel_dual_battery_support": false,
+   "normal_support": true,
+   "vooc_support": true,
+   "svooc_support": true,
+   "pd_support": true,
+   "qc_support": true,
+   "pps_support": true,
+   "ufcs_support": false,
+   "ship_mode_support": true,
+   "short_id_otp_status_support": false,
+   "input_current_now_support": false,
+   "qg_vbat_deviation_support": false,
+   "em_mode_support": false,
+   "bcc_check_support": true,
+   "boost_ic_support": false,
+   "charge_spec": {
+     "normal": {
+       "battery.temp.plugin.delta.range": "[0,50]",
+       "battery.voltage.range": "[3500,4600]",
+       "high.capacity.battery.voltage.range": "[3900,4600]",
+       "battery.temperate.range": "[150,450]",
+       "high.capacity.battery.temperate.range": "[150,450]",
+       "charger.voltage.range": "[4250,5500]",
+       "high.capacity.charger.voltage.range": "[4250,5500]",
+       "battery.current.range": "[-2300,-500]",
+       "high.capacity.battery.current.range": "[-2300,-200]",
+       "charge.battery.level.range": "[0,100]",
+       "high.capacity.threshold": 75
+     },
+     "qc": {
+       "battery.voltage.range": "[3500,4550]",
+       "high.capacity.battery.voltage.range": "[3850,4550]",
+       "battery.temperate.range": "[150,450]",
+       "high.capacity.battery.temperate.range": "[150,450]",
+       "charger.voltage.range": "[7600,9500]",
+       "high.capacity.charger.voltage.range": "[7600,9500]",
+       "battery.current.range": "[-4600,-1200]",
+       "high.capacity.battery.current.range": "[-4600,-800]",
+       "charge.sub.current.range": "",
+       "charge.battery.level.range": "[0,100]",
+       "high.capacity.threshold": 75
+     },
+     "pps": {
+       "battery.voltage.range": "[3500,4600]",
+       "high.capacity.battery.voltage.range": "[3900,4600]",
+       "battery.temperate.range": "[150,450]",
+       "high.capacity.battery.temperate.range": "[150,450]",
+       "charger.voltage.range": "",
+       "high.capacity.charger.voltage.range": "",
+       "battery.current.range": "[-6500,-2000]",
+       "high.capacity.battery.current.range": "[-6500,-1000]",
+       "charge.battery.level.range": "[0,100]",
+       "check.ufcs.chg.ing": true,
+       "high.capacity.threshold": 75
+     },
+     "pd": {
+       "battery.voltage.range": "[3500,4550]",
+       "high.capacity.battery.voltage.range": "[3850,4550]",
+       "battery.temperate.range": "[150,450]",
+       "high.capacity.battery.temperate.range": "[150,450]",
+       "charger.voltage.range": "[7600,9500]",
+       "high.capacity.charger.voltage.range": "[7600,9500]",
+       "battery.current.range": "[-4600,-1200]",
+       "high.capacity.battery.current.range": "[-4600,-800]",
+       "charge.sub.current.range": "",
+       "charge.battery.level.range": "[0,100]",
+       "high.capacity.threshold": 75
+     },
+     "vooc": {
+       "battery.voltage.range": "[3500,4600]",
+       "high.capacity.battery.voltage.range": "",
+       "battery.temperate.range": "[150,450]",
+       "high.capacity.battery.temperate.range": "",
+       "charger.voltage.range": "",
+       "high.capacity.charger.voltage.range": "",
+       "battery.current.range": "[-6500,-2000]",
+       "high.capacity.battery.current.range": "",
+       "charge.battery.level.range": "[0,75]",
+       "check.voocchg.ing": true,
+       "high.capacity.threshold": 75,
+       "dual.cp.current.delta.range": "[0,800]",
+       "dual.cp.current.slave.range": "[-4800,-500]",
+       "dual.cp.current.main.range": "[-4800,-500]"
+     },
+     "svooc": {
+       "battery.voltage.range": "[3500,4600]",
+       "high.capacity.battery.voltage.range": "",
+       "battery.temperate.range": "[150,450]",
+       "high.capacity.battery.temperate.range": "",
+       "charger.voltage.range": "",
+       "high.capacity.charger.voltage.range": "",
+       "battery.current.range": "[-15500,-3000]",
+       "high.capacity.battery.current.range": "",
+       "charge.battery.level.range": "[0,75]",
+       "check.voocchg.ing": true,
+       "high.capacity.threshold": 75,
+       "dual.cp.current.delta.range": "[0,600]",
+       "dual.cp.current.slave.range": "[-4800,-500]",
+       "dual.cp.current.main.range": "[-4800,-500]"
+     },
+      "ufcs": {}
+    }
+  },
+  "wireless_charge": {
+    "bpp_support": false,
+    "epp_support": false,
+    "air_vooc_support": false,
+    "air_svooc_support": false,
+    "reverse_support": false,
+    "wireless_power_efficieny_support": false,
+    "wireless_dual_charger_pump_support": false,
+    "charge_spec": {}
+  }
+}
+

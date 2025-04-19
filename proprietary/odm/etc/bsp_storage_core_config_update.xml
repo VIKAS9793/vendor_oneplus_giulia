@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<storage_feature>
+    <version>2024-05-10-01-01-01</version>
+    <feature_path ismulti="1" addr="/sys/fs/f2fs/">
+        <device_copy_enable>0</device_copy_enable>
+        <appboost>0</appboost>
+    </feature_path>
+    <compress_cfg>
+        <app_enable>1</app_enable>
+        <dedup_enable>1</dedup_enable>
+        <may_compress>1</may_compress>
+    </compress_cfg>
+</storage_feature>

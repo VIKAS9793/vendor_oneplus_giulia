@@ -1,0 +1,11 @@
+{
+	"threeaxis_sum_min_limit":"20192",
+	"threeaxis_sum_max_limit":"31359",
+	"threeaxis_up_limit":"6500,13500,11000,19000,-4200,4200",
+	"threeaxis_mid_limit":"-3500,3500,19500,29400,-5100,5100",
+	"threeaxis_down_limit":"-13400,-6500,11000,19000,-4200,4200",
+	"threeaxis_upmid_x_delta_limit":"5973",
+	"threeaxis_downmid_x_delta_limit":"5973",
+	"threeaxis_updown_x_delta_limit":"3982"
+}
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RFTOOLKIT>
+    <RAT name="NR5G">
+        <Band number="28">
+            <Channel type="Low">141100</Channel>  <!-- 705.5MHz -->
+            <Channel type="Mid">144000</Channel>   <!-- 720MHz -->
+            <Channel type="High">149100</Channel>   <!-- 745.5MHz -->
+        </Band>
+    </RAT>
+</RFTOOLKIT>
