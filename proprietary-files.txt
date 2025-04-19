@@ -1,0 +1,71 @@
+# Essential proprietary files for OnePlus 13R (giulia)
+# Only includes components without AOSP alternatives
+
+# Critical Firmware Files
+vendor/firmware/firmware/cryptoeng.b*
+vendor/firmware/bt_firmware/image/hmtnv20.b*
+vendor/firmware/firmware/uff_spi.b*
+
+# Essential Hardware Abstraction Layers (HALs)
+vendor/lib64/hw/camera.oemlayer.so
+vendor/lib64/hw/audio.binaural_record.default.so
+vendor/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/android.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/android.hardware.biometrics.fingerprint@2.2.so
+vendor/lib64/android.hardware.biometrics.fingerprint@2.3.so
+
+# Camera - Essential Components
+vendor/lib64/camera/components/com.oplus.node.preview.so
+vendor/lib64/camera/components/com.oplus.node.sstabphoto.so
+vendor/lib64/camera/com.qti.sensor.imx906.so
+vendor/lib64/camera/com.qti.sensor.imx355.so
+vendor/lib64/camera/com.qti.sensor.s5kjn5_giulia.so
+vendor/lib64/camera/com.qti.tuned.sunny_imx906.bin
+vendor/lib64/camera/com.qti.tuned.sunny_imx355.bin
+vendor/lib64/camera/com.qti.tuned.qtech_s5kjn5_tele.bin
+vendor/lib64/camera/libaecCustomParam_Cam0.bin
+vendor/lib64/camera/libafCustomParam_Cam0.bin
+vendor/lib64/camera/libpdCustomParam_Cam0.bin
+
+# Display - Core Components
+vendor/lib64/vendor.display.config@2.0.so
+vendor/lib64/vendor.display.color@1.3.so
+vendor/lib64/hw/vendor.oplus.hardware.display.common@1.0-impl.so
+
+# Radio/Telephony - Essential
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.9.so
+vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
+vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so
+vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
+
+# Audio - Device Specific
+vendor/lib64/soundfx/liboplusspatialrecord.so
+vendor/lib64/libtfa98xx.so
+vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
+
+# Security
+vendor/lib64/libQSEEComAPI_system.so
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
+
+# Critical Qualcomm Components
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.hardware.perf@2.3.so
+vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so
+
+# Device Specific Features
+vendor/lib64/vendor.oplus.hardware.charger@1.0.so
+vendor/lib64/vendor.oplus.hardware.performance@2.0.so
+
+# Essential System Apps (minimal set)
+-vendor/app/IWlanService/IWlanService.apk
+-vendor/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+
+# Neural Networks / AI - Essential Only
+vendor/lib64/libQnnHtp.so
+vendor/lib64/libQnnSystem.so
+
+# Sensors
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/sensors.ssc.so 
