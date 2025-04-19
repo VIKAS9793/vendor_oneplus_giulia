@@ -11,7 +11,7 @@ This repository uses Git Large File Storage (LFS) for managing large binary file
 git lfs install
 
 # Clone the repository
-git clone https://github.com/your-username/vendor_oneplus_giulia.git
+git clone https://github.com/VIKAS9793/vendor_oneplus_giulia.git -b lineage-22.2
 cd vendor_oneplus_giulia
 
 # Pull LFS files
